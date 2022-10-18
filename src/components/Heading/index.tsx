@@ -19,7 +19,7 @@ const Heading: React.FC = () => {
         </span>
 
         <button onClick={() => console.log("scrollToRef")}>
-          Discovery our collection
+          Discover our collection
         </button>
       </Card>
     </Container>
