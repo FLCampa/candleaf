@@ -1,5 +1,6 @@
 // External Libraries
 import React from "react";
+import Button from "../Button";
 
 // Stylization
 import { Container, Card } from "./styles";
@@ -18,9 +19,11 @@ const Heading: React.FC = () => {
           your pleasure moments
         </span>
 
-        <button onClick={() => console.log("scrollToRef")}>
-          Discover our collection
-        </button>
+        <Button
+          onClick={() => console.log("scrollToRef")}
+          text="Discover our collection"
+          width="310px"
+        />
       </Card>
     </Container>
   );

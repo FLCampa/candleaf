@@ -35,22 +35,6 @@ export const Card = styled.div`
 
   > span {
     text-align: center;
-    margin: 0 90px;
-  }
-
-  > button {
-    width: 310px;
-    height: 40px;
-    margin-top: 50px;
-    background: #56b280;
-
-    font-size: 18px;
-    color: white;
-
-    border-radius: 4px;
-
-    &:hover {
-      cursor: pointer;
-    }
+    margin: 0 90px 50px 90px;
   }
 `;
