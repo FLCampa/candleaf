@@ -5,6 +5,7 @@ import React from "react";
 import Nav from "../Nav";
 import Heading from "../Heading";
 import Products from "../Products";
+import Benefits from "../Benefits";
 
 // Stylization
 import { Container } from "./styles";
@@ -15,8 +16,8 @@ const HomeLayout: React.FC = () => {
       <Nav />
 
       <Heading />
-
       <Products />
+      <Benefits />
     </Container>
   );
 };
