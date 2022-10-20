@@ -1,7 +1,11 @@
+// External Libraries
 import React from "react";
-import Button from "../Button";
-import Feature from "../Feature";
 
+// Components
+import Feature from "../Feature";
+import Button from "../Button";
+
+// Stylization
 import { Container } from "./styles";
 
 const Benefits: React.FC = () => {
@@ -13,8 +17,8 @@ const Benefits: React.FC = () => {
         </h2>
         <p>Made for your home and for your wellness</p>
 
-        <Feature text="Eco-sustainable:All recyclable materials, 0% CO2 emissions" />
-        <Feature text="Hyphoallergenic: 100% natural, human friendly ingredients " />
+        <Feature text="Eco-sustainable: All recyclable materials, 0% CO2 emissions." />
+        <Feature text="Hyphoallergenic: 100% natural, human friendly ingredients." />
         <Feature text="Handmade: All candles are craftly made with love." />
         <Feature text="Long burning: No more waste. Created for last long." />
 

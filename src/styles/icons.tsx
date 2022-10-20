@@ -50,3 +50,50 @@ export const CheckMark = (
     />
   </svg>
 );
+
+export const Star = (
+  <svg
+    width="23"
+    height="22"
+    viewBox="0 0 23 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11.5679 0L14.262 8.2918H22.9805L15.9271 13.4164L18.6213 21.7082L11.5679 16.5836L4.51445 21.7082L7.20862 13.4164L0.155193 8.2918H8.8737L11.5679 0Z"
+      fill="#56B280"
+    />
+  </svg>
+);
+
+export const EmptyStar = (
+  <svg
+    width="24"
+    height="22"
+    viewBox="0 0 24 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11.9458 0L14.64 8.2918H23.3585L16.3051 13.4164L18.9992 21.7082L11.9458 16.5836L4.89238 21.7082L7.58655 13.4164L0.533123 8.2918H9.25163L11.9458 0Z"
+      fill="#5BC08A"
+    />
+    <path
+      d="M11.9458 0L14.64 8.2918H23.3585L16.3051 13.4164L18.9992 21.7082L11.9458 16.5836L4.89238 21.7082L7.58655 13.4164L0.533123 8.2918H9.25163L11.9458 0Z"
+      fill="url(#paint0_linear_761_237)"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_761_237"
+        x1="14.9998"
+        y1="15"
+        x2="-9.00024"
+        y2="13"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="white" stopOpacity="0" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
