@@ -6,6 +6,7 @@ import Nav from "../Nav";
 import Heading from "../Heading";
 import Products from "../Products";
 import Benefits from "../Benefits";
+import Testimonials from "../Testimonials";
 
 // Stylization
 import { Container } from "./styles";
@@ -18,6 +19,7 @@ const HomeLayout: React.FC = () => {
       <Heading />
       <Products />
       <Benefits />
+      <Testimonials />
     </Container>
   );
 };

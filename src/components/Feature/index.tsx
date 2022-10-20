@@ -1,7 +1,10 @@
+// External Libraries
 import React from "react";
 
+// Assets
 import { CheckMark } from "../../styles/icons";
 
+// Stylization
 import { Container } from "./styles";
 
 interface FeatureProps {
