@@ -13,6 +13,7 @@ export const Container = styled.section`
   > h2 {
     font-size: 40px;
     font-style: italic;
+    margin-bottom: 8px;
     color: #0b254b;
   }
 

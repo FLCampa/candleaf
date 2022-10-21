@@ -7,11 +7,10 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  height: 865px;
+  height: 600px;
 
   > h2 {
     font-size: 40px;
-    font-weight: 500;
     margin-bottom: 8px;
     color: #0b254b;
   }
@@ -21,11 +20,11 @@ export const Container = styled.section`
     margin-bottom: 60px;
     color: #5e6e89;
   }
-`;
 
-export const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 
-  grid-gap: 30px;
+    grid-gap: 30px;
+  }
 `;

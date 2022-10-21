@@ -30,6 +30,7 @@ export const Container = styled.div<ContainerProps>`
     text-align: center;
     font-size: 22px;
     font-style: italic;
+    color: #1d293f;
   }
 
   > p {

@@ -36,6 +36,7 @@ export const Container = styled.div`
 
     h4 {
       font-size: 16px;
+      color: #1d293f;
     }
 
     span {

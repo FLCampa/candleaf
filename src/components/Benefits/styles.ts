@@ -12,6 +12,8 @@ export const Container = styled.section`
   > div {
     h2 {
       font-size: 40px;
+      margin-bottom: 8px;
+      color: #1d252c;
     }
 
     p {
