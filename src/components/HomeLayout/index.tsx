@@ -8,6 +8,7 @@ import Products from "../Products";
 import Benefits from "../Benefits";
 import Testimonials from "../Testimonials";
 import Popular from "../Popular";
+import Footer from "../Footer";
 
 // Stylization
 import { Container } from "./styles";
@@ -22,6 +23,7 @@ const HomeLayout: React.FC = () => {
       <Benefits />
       <Testimonials />
       <Popular />
+      <Footer />
     </Container>
   );
 };
