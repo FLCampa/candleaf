@@ -31,10 +31,12 @@ export const Card = styled.div`
   > h2 {
     font-size: 40px;
     font-weight: 500;
+    color: #1d252c;
   }
 
   > span {
     text-align: center;
     margin: 0 90px 50px 90px;
+    color: #1d252c;
   }
 `;
