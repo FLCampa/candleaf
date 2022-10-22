@@ -39,4 +39,9 @@ export const Card = styled.div`
     margin: 0 90px 50px 90px;
     color: #1d252c;
   }
+
+  @media (max-width: 750px) {
+    width: 100%;
+    height: 300px;
+  }
 `;

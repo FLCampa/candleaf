@@ -7,7 +7,8 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  height: 600px;
+  min-height: 600px;
+  padding: 60px 0;
   background: rgba(86, 178, 128, 0.1);
 
   > h2 {
@@ -25,6 +26,12 @@ export const Container = styled.section`
   }
 
   > div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @media (max-width: 1150px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;

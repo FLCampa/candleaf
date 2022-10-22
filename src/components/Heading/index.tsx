@@ -1,5 +1,7 @@
 // External Libraries
 import React from "react";
+
+// Components
 import Button from "../Button";
 
 // Stylization
@@ -20,7 +22,7 @@ const Heading: React.FC = () => {
         </span>
 
         <Button
-          onClick={() => console.log("scrollToRef")}
+          onClick={() => scroll()}
           text="Discover our collection"
           width="310px"
         />

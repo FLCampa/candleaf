@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   background: #f7f8fa;
 
   > div {
@@ -23,16 +23,26 @@ export const Container = styled.section`
     }
 
     div {
+      width: 548px;
       margin-bottom: 20px;
     }
 
     button {
       margin-top: 70px;
+
+      @media (max-width: 1150px) {
+        margin-top: 0;
+        margin-bottom: 60px;
+      }
     }
   }
 
   > div:last-child {
-    margin-left: 60px;
     box-shadow: 0px 4px 94px rgba(123, 123, 123, 0.35);
+  }
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    padding: 50px 0 80px 0;
   }
 `;

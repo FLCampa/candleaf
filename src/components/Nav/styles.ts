@@ -17,8 +17,8 @@ export const Content = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1024px;
-  padding: 0 5px;
+  max-width: 1130px;
+  padding: 0 20px;
 
   > ul {
     display: flex;

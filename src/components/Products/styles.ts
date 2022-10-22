@@ -7,7 +7,7 @@ export const Container = styled.section`
   align-items: center;
 
   width: 100%;
-  height: 865px;
+  padding: 50px 0 90px 0;
 
   > h2 {
     font-size: 40px;
@@ -28,4 +28,14 @@ export const CardsContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
 
   grid-gap: 30px;
+
+  @media (max-width: 1150px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 875px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 585px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;

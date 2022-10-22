@@ -13,7 +13,6 @@ export const Container = styled.div<ContainerProps>`
   width: 350px;
   height: 295px;
   padding: 10px 30px 25px 30px;
-  margin-right: ${({ marginRight }) => (marginRight ? marginRight : 0)};
   background: white;
 
   box-shadow: 0px 4px 24px rgba(139, 167, 178, 0.16);
