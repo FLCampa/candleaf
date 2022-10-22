@@ -6,7 +6,7 @@ export const Container = styled.footer`
   align-items: center;
 
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   background: #272727;
 
   > hr {
@@ -22,7 +22,8 @@ export const Content = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1110px;
+  max-width: 1130px;
+  padding: 0 20px;
 
   > :nth-child(1) {
     h3 {
@@ -34,6 +35,10 @@ export const Content = styled.div`
 
   > :nth-child(2) {
     display: flex;
+  }
+
+  @media (max-width: 830px) {
+    flex-direction: column;
   }
 `;
 

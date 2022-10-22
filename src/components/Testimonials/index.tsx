@@ -19,7 +19,6 @@ const Testimonials: React.FC = () => {
           rating={4}
           quote="“I love it! No more air fresheners”"
           author="Luisa"
-          marginRight="30px"
         />
 
         <TestimonialCard
@@ -27,7 +26,6 @@ const Testimonials: React.FC = () => {
           rating={5}
           quote="“Recommended for everyone”"
           author="Edoardo"
-          marginRight="30px"
         />
 
         <TestimonialCard

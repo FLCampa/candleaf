@@ -12,7 +12,6 @@ interface TestimonialCardProps {
   rating?: number;
   quote?: string;
   author?: string;
-  marginRight?: string;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -20,10 +19,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   rating,
   quote,
   author,
-  marginRight,
 }) => {
   return (
-    <Container marginRight={marginRight}>
+    <Container>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={avatar} alt="avatar image" />
 

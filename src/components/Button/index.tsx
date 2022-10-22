@@ -7,7 +7,7 @@ import { Container } from "./styles";
 interface ButtonProps {
   text: string;
   width?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({ text, width, onClick }) => {
