@@ -11,7 +11,7 @@ const Heading: React.FC = () => {
   return (
     <Container>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/bg-image.png" alt="background image" />
+      <img src="/images/background.png" alt="background image" />
 
       <Card>
         <h2>The nature candle</h2>

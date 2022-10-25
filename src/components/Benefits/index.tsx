@@ -31,7 +31,7 @@ const Benefits: React.FC = () => {
 
       <div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/benefits-image.png" alt="benefits image" />
+        <img src="/images/benefits.png" alt="benefits image" />
       </div>
     </Container>
   );

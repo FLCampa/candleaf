@@ -15,7 +15,7 @@ const Nav: React.FC = () => {
   return (
     <Container>
       <Content>
-        <Image src="/logo.svg" alt="Logo" width={126} height={34} />
+        <Image src="/icons/logo.svg" alt="Logo" width={126} height={34} />
 
         <ul>
           {/* <MenuItem url="/notifications" text="Notifications" icon={BellIcon} /> */}
