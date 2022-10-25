@@ -20,16 +20,23 @@ import {
   RightColumn,
 } from "./styles";
 
-const ProductLayout: React.FC = () => {
-  const price = 9.99;
+interface ProductLayoutProps {
+  image: any;
+  name: string;
+  price: number;
+}
+
+const ProductLayout: React.FC<ProductLayoutProps> = ({
+  image,
+  name,
+  price,
+}) => {
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity(quantity + 1);
   const decreaseQuantity = () => quantity > 1 && setQuantity(quantity - 1);
 
-  const [purchaseType, setPurchaseType] = useState<"oneTime" | "subscribe">(
-    "subscribe"
-  );
+  const [purchaseType, setPurchaseType] = useState<any>();
 
   return (
     <Container>
@@ -39,7 +46,7 @@ const ProductLayout: React.FC = () => {
         <ImageContainer>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/product-image.png" alt="product image" />
+            <img src={image} alt="product image" />
           </div>
 
           <h3>
@@ -51,7 +58,7 @@ const ProductLayout: React.FC = () => {
         </ImageContainer>
 
         <RightColumn>
-          <h2>Spiced Mint Candleaf®</h2>
+          <h2>{name}</h2>
 
           <Details>
             <Price>
@@ -68,13 +75,14 @@ const ProductLayout: React.FC = () => {
             </Price>
 
             <Subscription>
-              <RadioGroup
-                onChange={(e) =>
-                  console.log((e.target as HTMLInputElement).value)
-                }
-              >
+              <RadioGroup>
                 <label>
-                  <input type="radio" value="oneTime" name="purchaseType" />
+                  <input
+                    type="radio"
+                    value="oneTime"
+                    name="purchaseType"
+                    onChange={(e) => setPurchaseType(e.target.value)}
+                  />
                   One time purchase
                 </label>
 
@@ -83,7 +91,7 @@ const ProductLayout: React.FC = () => {
                     type="radio"
                     value="subscribe"
                     name="purchaseType"
-                    defaultValue="subscribe"
+                    onChange={(e) => setPurchaseType(e.target.value)}
                     checked
                   />
                   Subscribe and delivery every 4 weeks

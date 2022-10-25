@@ -6,7 +6,13 @@ import { NextPage } from "next";
 import ProductLayout from "../../components/ProductLayout";
 
 const Product: NextPage = () => {
-  return <ProductLayout />;
+  return (
+    <ProductLayout
+      name="Spiced Mint Candleaf®"
+      price={9.98}
+      image="/product-image.png"
+    />
+  );
 };
 
 export default Product;

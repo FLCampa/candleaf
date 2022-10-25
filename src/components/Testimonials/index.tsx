@@ -15,21 +15,21 @@ const Testimonials: React.FC = () => {
 
       <div>
         <TestimonialCard
-          avatar="/avatar-image-1.png"
+          avatar="/images/avatar-1.png"
           rating={4}
           quote="“I love it! No more air fresheners”"
           author="Luisa"
         />
 
         <TestimonialCard
-          avatar="/avatar-image-2.png"
+          avatar="/images/avatar-2.png"
           rating={5}
           quote="“Recommended for everyone”"
           author="Edoardo"
         />
 
         <TestimonialCard
-          avatar="/avatar-image-3.png"
+          avatar="/images/avatar-3.png"
           rating={4}
           quote="“Looks very natural, the smell is awesome”"
           author="Mart"
