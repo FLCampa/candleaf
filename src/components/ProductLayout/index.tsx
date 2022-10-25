@@ -34,9 +34,10 @@ const ProductLayout: React.FC<ProductLayoutProps> = ({
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity(quantity + 1);
+
   const decreaseQuantity = () => quantity > 1 && setQuantity(quantity - 1);
 
-  const [purchaseType, setPurchaseType] = useState<any>();
+  const [purchaseType, setPurchaseType] = useState("subscribe");
 
   return (
     <Container>
@@ -68,21 +69,29 @@ const ProductLayout: React.FC<ProductLayoutProps> = ({
                 <h5>Quantity</h5>
                 <div>
                   <button onClick={decreaseQuantity}>-</button>
-                  <input type="number" value={quantity} min={1} />
+                  <input
+                    type="number"
+                    value={quantity}
+                    min={1}
+                    onChange={(event) => {
+                      const value = Number(event.target.value);
+                      setQuantity(value);
+                    }}
+                  />
                   <button onClick={increaseQuantity}>+</button>
                 </div>
               </Quantity>
             </Price>
 
             <Subscription>
-              <RadioGroup>
+              <RadioGroup
+                onChange={(event) => {
+                  const value = (event.target as HTMLTextAreaElement).value;
+                  setPurchaseType(value);
+                }}
+              >
                 <label>
-                  <input
-                    type="radio"
-                    value="oneTime"
-                    name="purchaseType"
-                    onChange={(e) => setPurchaseType(e.target.value)}
-                  />
+                  <input type="radio" value="oneTime" name="purchaseType" />
                   One time purchase
                 </label>
 
@@ -91,8 +100,7 @@ const ProductLayout: React.FC<ProductLayoutProps> = ({
                     type="radio"
                     value="subscribe"
                     name="purchaseType"
-                    onChange={(e) => setPurchaseType(e.target.value)}
-                    checked
+                    defaultChecked
                   />
                   Subscribe and delivery every 4 weeks
                   <br />

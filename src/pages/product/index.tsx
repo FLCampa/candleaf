@@ -10,7 +10,7 @@ const Product: NextPage = () => {
     <ProductLayout
       name="Spiced Mint Candleaf®"
       price={9.98}
-      image="/product-image.png"
+      image="/images/product/spiced-mint-l.png"
     />
   );
 };
