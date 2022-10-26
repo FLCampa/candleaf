@@ -1,4 +1,5 @@
 // External Libraries
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Button from "../Button";
 import Footer from "../Footer";
@@ -21,23 +22,23 @@ import {
 } from "./styles";
 
 interface ProductLayoutProps {
-  image: any;
-  name: string;
-  price: number;
+  image?: any;
+  name?: string;
+  price?: number;
 }
 
-const ProductLayout: React.FC<ProductLayoutProps> = ({
-  image,
-  name,
-  price,
-}) => {
+const ProductLayout: React.FC<ProductLayoutProps> = () => {
   const [quantity, setQuantity] = useState(1);
-
   const increaseQuantity = () => setQuantity(quantity + 1);
-
   const decreaseQuantity = () => quantity > 1 && setQuantity(quantity - 1);
 
   const [purchaseType, setPurchaseType] = useState("subscribe");
+
+  const router = useRouter();
+
+  const {
+    query: { image, name, price },
+  } = router;
 
   return (
     <Container>
@@ -47,7 +48,7 @@ const ProductLayout: React.FC<ProductLayoutProps> = ({
         <ImageContainer>
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt="product image" />
+            <img src={image.toString()} alt="product image" />
           </div>
 
           <h3>

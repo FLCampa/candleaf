@@ -23,6 +23,13 @@ export const ImageContainer = styled.div`
   width: 540px;
 
   > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 535px;
+    height: 435px;
+
     background: #f7f8fa;
     border-radius: 3px;
   }
@@ -47,9 +54,10 @@ export const RightColumn = styled.div`
 
   width: 540px;
   margin-left: 30px;
+  height: 575px;
 
   > h2 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -126,7 +134,10 @@ export const Subscription = styled.div`
   justify-content: space-between;
 
   width: 350px;
-  height: 300px;
+
+  > button {
+    margin-top: 65px;
+  }
 `;
 
 export const RadioGroup = styled.div`
@@ -137,6 +148,7 @@ export const RadioGroup = styled.div`
     font-size: 14px;
     font-weight: 400;
     padding: 20px;
+    margin-bottom: 5px;
     border: 2px solid #e6e6e6;
     border-radius: 7px;
 

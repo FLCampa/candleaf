@@ -1,6 +1,6 @@
 // External Libraries
 import React from "react";
-import Link from "next/link";
+import Router from "next/router";
 
 // Stylization
 import { Container } from "./styles";
@@ -20,12 +20,24 @@ const ProductCard: React.FC<ProductCardProps> = ({
   url,
   onClick,
 }) => {
-  function formatedUrl() {
-    return url.replace(/\s/g, "").toLowerCase();
+  const formatedName = url.replace(/\s/g, "").toLowerCase();
+
+  function sendProps(image, name, price) {
+    Router.push(
+      {
+        pathname: `/product`,
+        query: {
+          image: image,
+          name: name,
+          price: price,
+        },
+      },
+      `/product/${formatedName}`
+    );
   }
 
   return (
-    <Link href={formatedUrl()}>
+    <a onClick={() => sendProps(image, name, price)}>
       <Container>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={image} alt="product image" />
@@ -35,7 +47,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <span>{`${price}$`}</span>
         </div>
       </Container>
-    </Link>
+    </a>
   );
 };
 
