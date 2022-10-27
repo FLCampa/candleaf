@@ -20,7 +20,7 @@ const Products: React.FC = () => {
         {products.map((product, i) => (
           <ProductCard
             key={i}
-            image="/product.png"
+            image={`/images/product/${product.mediumImage}`}
             name={product.name}
             price={product.price}
             url={product.name}

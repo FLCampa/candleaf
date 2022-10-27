@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <Content>
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/footer-logo.png" alt="footer logo" />
+          <img src="/images/footer.png" alt="footer logo" />
           <h3>
             Your natural candle made for <br /> your home and for your wellness.
           </h3>
