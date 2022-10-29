@@ -1,15 +1,27 @@
 // External Libraries
-import React from "react";
+import React, { useState } from "react";
 
 // Components
 import Nav from "../Nav";
 import Footer from "../Footer";
-
-// Stylization
-import { Container, Content, ImageContainer } from "./styles";
 import Button from "../Button";
 
-const CartLayout: React.FC = () => {
+// Stylization
+import { Container, Content, ImageContainer, Quantity } from "./styles";
+
+interface CartLayoutProps {
+  name: string;
+  price: string;
+  qty: number;
+}
+
+const CartLayout: React.FC<CartLayoutProps> = ({ name, price, qty }) => {
+  const [quantity, setQuantity] = useState(qty);
+  const increaseQuantity = () => setQuantity(quantity + 1);
+  const decreaseQuantity = () => quantity > 1 && setQuantity(quantity - 1);
+
+  const subTotal = () => (quantity * Number(price)).toFixed(2);
+
   return (
     <Container>
       <Nav />
@@ -35,29 +47,41 @@ const CartLayout: React.FC = () => {
                   <ImageContainer>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/images/product/clean-lavander-m.png"
-                      alt=" product image"
+                      src="/images/product/spiced-mint-m.png"
+                      alt="product image"
                     />
                   </ImageContainer>
 
                   <div>
-                    <h3>Spiced Mint Candleaf</h3>
+                    <h3>{name}</h3>
                     <a href="">Remove</a>
                   </div>
                 </div>
               </td>
-              <td>$9.99</td>
-              <td>1</td>
-              <td>$9.99</td>
+              <td>{`$ ${price}`}</td>
+              <td>
+                <Quantity>
+                  <button onClick={decreaseQuantity}>-</button>
+                  <input
+                    type="number"
+                    value={qty}
+                    min={1}
+                    onChange={(event) => {
+                      const value = Number(event.target.value);
+                      setQuantity(value);
+                    }}
+                  />
+                  <button onClick={increaseQuantity}>+</button>
+                </Quantity>
+              </td>
+              <td>{`$ ${subTotal()}`}</td>
             </tr>
           </tbody>
         </table>
 
         <div>
           <div>
-            <h3>
-              Sub-total <b>$9.99</b>
-            </h3>
+            <h3>Sub-total {`$ ${subTotal()}`}</h3>
             <span>Tax and shipping cost will be calculated later</span>
           </div>
 
