@@ -6,7 +6,7 @@ import { NextPage } from "next";
 import CartLayout from "../../components/CartLayout";
 
 const Cart: NextPage = () => {
-  return <CartLayout />;
+  return <CartLayout name="Spiced Mint Candleaf" price="9.99" qty={2} />;
 };
 
 export default Cart;

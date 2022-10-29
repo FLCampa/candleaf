@@ -37,6 +37,17 @@ export const Content = styled.div`
     overflow: hidden;
     border-collapse: collapse;
 
+    > thead {
+      > tr {
+        th:not(:nth-child(4)) {
+          min-width: 150px;
+        }
+        th:nth-child(4) {
+          min-width: 80px;
+        }
+      }
+    }
+
     > tbody {
       > tr {
         height: 195px;
@@ -93,10 +104,6 @@ export const Content = styled.div`
       color: #9e9e9e;
     }
 
-    b {
-      margin-left: 60px;
-    }
-
     > button {
       margin-left: 70px;
     }
@@ -111,4 +118,50 @@ export const ImageContainer = styled.div`
   width: 160px;
   height: 130px;
   background: #f7f8fa;
+`;
+
+export const Quantity = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 75px;
+
+  > h5 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  border: 2px #56b280 solid;
+
+  > button {
+    width: 100%;
+    background: white;
+
+    font-size: 20px;
+    color: #56b280;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  > input {
+    width: 25px;
+
+    text-align: center;
+    font-size: 20px;
+    border: none;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 `;
