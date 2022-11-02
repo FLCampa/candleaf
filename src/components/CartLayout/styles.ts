@@ -152,6 +152,10 @@ export const Quantity = styled.div`
     }
   }
 
+  input[type="number"]:focus {
+    outline: none;
+  }
+
   > input {
     width: 25px;
 
