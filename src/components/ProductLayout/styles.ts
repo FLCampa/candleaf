@@ -87,6 +87,10 @@ export const Quantity = styled.div`
   width: 75px;
   margin-top: 30px;
 
+  input[type="number"]:focus {
+    outline: none;
+  }
+
   > h5 {
     font-size: 16px;
     margin-bottom: 4px;

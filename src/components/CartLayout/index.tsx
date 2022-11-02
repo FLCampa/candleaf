@@ -65,6 +65,7 @@ const CartLayout: React.FC<CartLayoutProps> = ({ name, price, qty }) => {
                   <input
                     type="number"
                     value={qty}
+                    readOnly
                     min={1}
                     onChange={(event) => {
                       const value = Number(event.target.value);

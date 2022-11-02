@@ -74,6 +74,7 @@ const ProductLayout: React.FC<ProductLayoutProps> = () => {
                     type="number"
                     value={quantity}
                     min={1}
+                    readOnly
                     onChange={(event) => {
                       const value = Number(event.target.value);
                       setQuantity(value);
