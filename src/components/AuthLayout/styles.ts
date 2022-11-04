@@ -63,22 +63,6 @@ export const Row = styled.div<RowProps>`
   }
 `;
 
-export const Checkbox = styled.div`
-  display: flex;
-  align-items: center;
-
-  input[type="checkbox"] {
-    margin-top: 10px;
-    margin-right: 7px;
-  }
-
-  > label {
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 10.5px;
-  }
-`;
-
 export const CouponCode = styled.div`
   display: flex;
   flex-direction: column;
@@ -110,10 +94,33 @@ export const CouponCode = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
+
+  width: 100%;
+  max-width: 445px;
+  margin-bottom: 22px;
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    color: #56b280;
+  }
+`;
+
+export const Img = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
 
   width: 160px;
   height: 130px;
+  margin-right: 60px;
   background: #f7f8fa;
+
+  > img {
+    width: 160px;
+    height: auto;
+  }
 `;
