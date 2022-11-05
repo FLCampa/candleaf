@@ -5,8 +5,69 @@ export const Container = styled.section`
   flex-direction: column;
 
   > h1 {
+    width: 445px;
     font-size: 22px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+  }
+`;
+
+export const InfoSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 445px;
+  margin: 45px 0;
+
+  border: 2px solid #e6e6e6;
+  border-radius: 7px;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 19px 20px;
+
+    > div {
+      display: flex;
+      align-items: center;
+
+      > h4 {
+        width: 75px;
+        color: #818181;
+        font-weight: 400;
+      }
+
+      > p {
+        max-width: 290px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    > h4,
+    p,
+    a,
+    button {
+      font-size: 14px;
+    }
+
+    > button {
+      background: transparent;
+      color: #56b280;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  > hr {
+    width: 90%;
+    border: 1px solid #e6e6e6;
   }
 `;
 
